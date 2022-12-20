@@ -1,5 +1,7 @@
 $font_style: sans-serif;
-$text_menu_color: #000;
+$text_menu_color: #f5f5f5;
+$primary_color_orange: #ff904d;
+$primary_color_white: #ecf0f1;
 
 * {
     margin: 0;
@@ -22,6 +24,9 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20PX 50px;
+    background-color: $primary_color_orange;
+    //position: fixed;
+    
 }
 
 #menu li{
@@ -40,4 +45,47 @@ section {
     width: 100%;
     float: left;
     height: 100vh;
+    position: relative;
+}
+
+#acerca_de {
+    background-color: $primary_color_white;
+    h1 {
+        position: absolute;
+    }
+}
+
+#habilidades {
+    background-color: $primary_color_orange;
+    h1 {
+        position: absolute;
+    }
+}
+
+#experiencias {
+    background-color: $primary_color_white;
+    h1 {
+        position: absolute;
+    }
+}
+
+#logros {
+    background-color: $primary_color_orange;
+    h1 {
+        position: absolute;
+    }
+}
+
+#certificados {
+    background-color: $primary_color_white;
+    h1 {
+        position: absolute;
+    }
+}
+
+#contacto {
+    background-color: $primary_color_orange;
+    h1 {
+        position: absolute;
+    }
 }

@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20PX 50px;
+  background-color: #ff904d;
 }
 
 #menu li {
@@ -25,7 +26,7 @@ header {
   margin: 20px;
 }
 #menu li a {
-  color: #000;
+  color: #f5f5f5;
   text-decoration: none;
   font-size: 20px;
 }
@@ -34,6 +35,49 @@ section {
   width: 100%;
   float: left;
   height: 100vh;
+  position: relative;
+}
+
+#acerca_de {
+  background-color: #ecf0f1;
+}
+#acerca_de h1 {
+  position: absolute;
+}
+
+#habilidades {
+  background-color: #ff904d;
+}
+#habilidades h1 {
+  position: absolute;
+}
+
+#experiencias {
+  background-color: #ecf0f1;
+}
+#experiencias h1 {
+  position: absolute;
+}
+
+#logros {
+  background-color: #ff904d;
+}
+#logros h1 {
+  position: absolute;
+}
+
+#certificados {
+  background-color: #ecf0f1;
+}
+#certificados h1 {
+  position: absolute;
+}
+
+#contacto {
+  background-color: #ff904d;
+}
+#contacto h1 {
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */
