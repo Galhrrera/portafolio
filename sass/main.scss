@@ -1,0 +1,43 @@
+$font_style: sans-serif;
+$text_menu_color: #000;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    font-family: $font_style;
+}
+
+div, section, span, ul, li, a, p header{
+    box-sizing:  border-box 1px;
+}
+
+//RESET CSS//
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20PX 50px;
+}
+
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+
+    a {
+        color: $text_menu_color;
+        text-decoration: none;
+        font-size: 20px;
+    }
+}
+
+section {
+    width: 100%;
+    float: left;
+    height: 100vh;
+}
