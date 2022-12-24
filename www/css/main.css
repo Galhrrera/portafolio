@@ -17,9 +17,11 @@
 .navbar {
   position: fixed;
   width: 100%;
+  height: 75px;
   padding: 15px 0;
   background-color: #ff904d;
   font-family: "Ubuntu", sans-serif;
+  z-index: 999;
 }
 .navbar .max_width {
   display: flex;
@@ -46,9 +48,8 @@
   font-weight: 600;
 }
 
-/* Botón menu */
-/* Section Acerca de mi */
-.acerca_de_mi {
+/* Section Inicio */
+.Inicio {
   display: flex;
   height: 100vh;
   background-color: whitesmoke;
@@ -56,29 +57,30 @@
   min-height: 500px;
   font-family: "Ubuntu", sans-serif;
 }
-.acerca_de_mi .acerca_de_mi_div {
+.Inicio .Inicio_div {
   display: flex;
   margin: auto;
+  padding-top: 30px;
 }
-.acerca_de_mi .acerca_de_mi_div .img_gal img {
+.Inicio .Inicio_div .img_gal img {
   width: 500px;
   border-radius: 10%;
 }
-.acerca_de_mi .max_width {
+.Inicio .max_width {
   margin: auto 0 auto 40px;
 }
-.acerca_de_mi .acerca_de_mi_content .acerca_de_mi_1 {
+.Inicio .Inicio_content .Inicio1 {
   font-size: 27px;
 }
-.acerca_de_mi .acerca_de_mi_content .acerca_de_mi_2 {
+.Inicio .Inicio_content .Inicio2 {
   font-size: 75px;
   margin-left: -3px;
 }
-.acerca_de_mi .acerca_de_mi_content .acerca_de_mi_3 {
+.Inicio .Inicio_content .Inicio3 {
   font-size: 40px;
   margin: 5px 0;
 }
-.acerca_de_mi .acerca_de_mi_content .acerca_de_mi_3 span {
+.Inicio .Inicio_content .Inicio3 span {
   color: #ff904d;
   font-weight: 500;
 }
@@ -97,12 +99,104 @@
   width: 100%;
   height: 3px;
   background-color: whitesmoke;
+  z-index: 2000;
   margin-top: 6px;
   transform-origin: 0px 100%;
   transition: all 300ms;
 }
 
+/* Section Acerca de mi */
+section {
+  padding: 100px 0;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.acerca_de_mi {
+  font-family: "Poppins", sans-serif;
+}
+.acerca_de_mi .titulo {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+.acerca_de_mi .titulo:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 235px;
+  height: 3px;
+  background-color: #1c1c1c;
+  transform: translateX(-50%);
+}
+.acerca_de_mi .titulo::after {
+  content: "¿Quién soy?";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: #ff904d;
+  padding: 5px;
+  background-color: whitesmoke;
+  transform: translateX(-50%);
+}
+.acerca_de_mi .acerca_de_mi_content {
+  align-items: center;
+  justify-content: space-between;
+}
+.acerca_de_mi .acerca_de_mi_content .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+.acerca_de_mi .acerca_de_mi_content .text span {
+  color: #ff904d;
+}
+.acerca_de_mi .acerca_de_mi_content p {
+  text-align: justify;
+}
+.acerca_de_mi .acerca_de_mi_content a {
+  display: inline-block;
+  background-color: #ff904d;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #ff904d;
+  transition: all 0.3s ease;
+}
+.acerca_de_mi .acerca_de_mi_content a:hover {
+  color: #a34e00;
+  background: none;
+}
+
 /* Responsive media */
+@media (max-width: 1190px) {
+  .Inicio .Inicio_content .Inicio2 {
+    font-size: 60px;
+  }
+  .Inicio .Inicio_content .Inicio3 {
+    font-size: 40px;
+  }
+  .Inicio .Inicio_content .Inicio3 span {
+    color: #ff904d;
+    font-weight: 400;
+  }
+  .Inicio .Inicio_div .img_gal img {
+    width: 400px;
+    border-radius: 10%;
+  }
+  .Inicio .max_width {
+    margin-left: 0px;
+  }
+}
 @media (max-width: 900px) {
   .max_width {
     padding: 0 50px;
@@ -129,13 +223,16 @@
     transition: all 300ms;
   }
   .activeline1_bar_menu {
+    z-index: 2000;
     transform: rotate(45deg) translate(-1px, 0);
   }
   .activeline2_bar_menu {
+    z-index: 2000;
     opacity: 0;
     margin-left: -25px;
   }
   .activeline3_bar_menu {
+    z-index: 2000;
     transform: rotate(-45deg) translate(1px, 0);
   }
   .navbar .menu_burguer {
@@ -148,6 +245,8 @@
     background-color: #1c1c1c;
     text-align: center;
     padding-top: 85px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
   }
   .navbar .menu_burguer li {
     display: block;
@@ -159,6 +258,73 @@
   }
   .navbar .menu_burguer li a:hover {
     color: #a34e00;
+  }
+  .Inicio .Inicio_div .img_gal img {
+    width: 250px;
+    border-radius: 10%;
+  }
+}
+@media (max-width: 380px) {
+  .Inicio .Inicio_content .Inicio1 {
+    font-size: 10px;
+  }
+  .Inicio .Inicio_content .Inicio2 {
+    font-size: 30px;
+  }
+  .Inicio .Inicio_content .Inicio3 {
+    font-size: 15px;
+  }
+  .Inicio .Inicio_content .Inicio3 span {
+    color: #ff904d;
+    font-weight: 200;
+  }
+  .Inicio .Inicio_div .img_gal img {
+    width: 120px;
+    border-radius: 10%;
+  }
+  .Inicio .max_width {
+    margin-left: 0px;
+  }
+  .acerca_de_mi .titulo {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .acerca_de_mi .acerca_de_mi_content {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .acerca_de_mi .acerca_de_mi_content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .acerca_de_mi .acerca_de_mi_content .text span {
+    color: #ff904d;
+  }
+  .acerca_de_mi .acerca_de_mi_content p {
+    text-align: justify;
+    font-size: 15px;
+  }
+  .acerca_de_mi .acerca_de_mi_content a {
+    display: inline-block;
+    background-color: #ff904d;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 2px solid #ff904d;
+    transition: all 0.3s ease;
+  }
+  .acerca_de_mi .acerca_de_mi_content a:hover {
+    color: #a34e00;
+    background: none;
   }
 }
 

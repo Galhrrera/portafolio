@@ -26,9 +26,11 @@ $a_hover: #a34e00;
 .navbar {
     position: fixed;
     width: 100%;
+    height: 75px;
     padding: 15px 0;
     background-color: $nav_background_color;
     font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
 
     .max_width {
         display: flex;
@@ -62,16 +64,14 @@ $a_hover: #a34e00;
     }
 }
 
-/* Botón menu */
+/* Section Inicio */
 
+.Inicio {
 
-/* Section Acerca de mi */
-
-.acerca_de_mi {
-
-    .acerca_de_mi_div {
+    .Inicio_div {
         display: flex;
         margin: auto;
+        padding-top: 30px;
 
         .img_gal {
             img {
@@ -82,6 +82,7 @@ $a_hover: #a34e00;
     }
 
     display: flex;
+
     height: 100vh;
     background-color: $img_background;
     color: $text_color;
@@ -93,17 +94,17 @@ $a_hover: #a34e00;
         margin: auto 0 auto 40px;
     }
 
-    .acerca_de_mi_content {
-        .acerca_de_mi_1 {
+    .Inicio_content {
+        .Inicio1 {
             font-size: 27px;
         }
 
-        .acerca_de_mi_2 {
+        .Inicio2 {
             font-size: 75px;
             margin-left: -3px;
         }
 
-        .acerca_de_mi_3 {
+        .Inicio3 {
             font-size: 40px;
             margin: 5px 0;
 
@@ -129,25 +130,141 @@ $a_hover: #a34e00;
         width: 100%;
         height: 3px;
         background-color: $menu_text_color;
+        z-index: 2000;
         margin-top: 6px;
         transform-origin: 0px 100%;
-        transition: all 300ms;        
+        transition: all 300ms;
     }
 }
 
 
+/* Section Acerca de mi */
+section {
+    padding: 100px 0;
+    height: 100vh;
+    background-color: $img_background;
+}
+
+.acerca_de_mi {
+    font-family: "Poppins", sans-serif;
+
+
+    .titulo {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        padding-bottom: 15px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .titulo:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 235px;
+        height: 3px;
+        background-color: $text_color;
+        transform: translateX(-50%);
+    }
+
+    .titulo::after {
+        content: "¿Quién soy?";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        font-size: 20px;
+        color: $nav_background_color;
+        padding: 5px;
+        background-color: $img_background;
+        transform: translateX(-50%);
+    }
+
+    .acerca_de_mi_content {
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 45px;
+
+            span {
+                color: $nav_background_color;
+            }
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        a {
+            display: inline-block;
+            background-color: $nav_background_color;
+            color: $menu_text_color;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-radius: 6px;
+            border: 2px solid $nav_background_color;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: $a_hover;
+            background: none;
+        }
+    }
+}
 
 /* Responsive media */
+@media(max-width: 1190px) {
+    .Inicio {
+        .Inicio_content {
+            .Inicio2 {
+                font-size: 60px;
+            }
+
+            .Inicio3 {
+                font-size: 40px;
+
+                span {
+                    color: $nav_background_color;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 400px;
+                    border-radius: 10%;
+                }
+            }
+        }
+
+        .max_width {
+            margin-left: 0px;
+        }
+    }
+
+}
+
+
 @media(max-width: 900px) {
     .max_width {
         padding: 0 50px;
     }
 
     /* burguer menu */
-
     .menu {
         visibility: hidden;
     }
+
     .burguer_menu {
         width: 25px;
         position: absolute;
@@ -164,26 +281,27 @@ $a_hover: #a34e00;
             margin-top: 6px;
             transform-origin: 0px 100%;
             transition: all 300ms;
-            
+
         }
     }
 
     .activeline1_bar_menu {
+        z-index: 2000;
         transform: rotate(45deg) translate(-1px, 0);
     }
 
     .activeline2_bar_menu {
+        z-index: 2000;
         opacity: 0;
         margin-left: -25px;
     }
 
     .activeline3_bar_menu {
+        z-index: 2000;
         transform: rotate(-45deg) translate(1px, 0);
     }
 
     .navbar {
-
-
 
         .menu_burguer {
             visibility: visible;
@@ -195,6 +313,8 @@ $a_hover: #a34e00;
             background-color: $text_color;
             text-align: center;
             padding-top: 85px;
+            transform-origin: 0px 100%;
+            transition: all 300ms;
             //display: block;
 
             li {
@@ -213,4 +333,103 @@ $a_hover: #a34e00;
         }
 
     }
+
+    .Inicio {
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 250px;
+                    border-radius: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .Inicio {
+        .Inicio_content {
+            .Inicio1 {
+                font-size: 10px;
+            }
+
+            .Inicio2 {
+                font-size: 30px;
+            }
+
+            .Inicio3 {
+                font-size: 15px;
+
+                span {
+                    color: $nav_background_color;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 120px;
+                    border-radius: 10%;
+                }
+            }
+        }
+
+        .max_width {
+            margin-left: 0px;
+        }
+    }
+
+    .acerca_de_mi {   
+    
+        .titulo {
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-family: "Ubuntu", sans-serif;
+        }
+    
+        .acerca_de_mi_content {
+            align-items: center;
+            justify-content: space-between;
+    
+            .text {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 30px;
+    
+                span {
+                    color: $nav_background_color;
+                }
+            }
+    
+            p {
+                text-align: justify;
+                font-size: 15px;
+            }
+    
+            a {
+                display: inline-block;
+                background-color: $nav_background_color;
+                color: $menu_text_color;
+                font-size: 15px;
+                font-weight: 500;
+                padding: 5px 15px;
+                margin-top: 15px;
+                border-radius: 6px;
+                border: 2px solid $nav_background_color;
+                transition: all 0.3s ease;
+            }
+    
+            a:hover {
+                color: $a_hover;
+                background: none;
+            }
+        }
+    }
+
 }

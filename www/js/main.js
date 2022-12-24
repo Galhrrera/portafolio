@@ -10,14 +10,4 @@ function activeBurguerMenu() {
     line2.classList.toggle("activeline2_bar_menu");
     line3.classList.toggle("activeline3_bar_menu");
     menu.classList.toggle("menu_burguer");
-    
-    /*
-    if(menu.className.match("menu")){
-        menu.className = "menu_burguer"
-    }
-    if (document.getElementsByClassName("menu_burguer").className.match("menu_burguer")){
-        console.log("la clase es menu_burguer")
-        menu = document.getElementsByClassName("menu_burguer").className = "menu";
-    }
-    */
 }
