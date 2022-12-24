@@ -1,91 +1,184 @@
-$font_style: sans-serif;
-$text_menu_color: #f5f5f5;
-$primary_color_orange: #ff904d;
-$primary_color_white: #ecf0f1;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+$menu_text_color: whitesmoke;
+$nav_background_color: #ff904d;
+//$img_background: #2c1709;
+$img_background: whitesmoke;
+$text_color: #1c1c1c;
+$a_hover: #a34e00;
+
+
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-body {
-    font-size: 100%;
-    font-family: $font_style;
+.max_width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
 }
 
-div, section, span, ul, li, a, p header{
-    box-sizing:  border-box 1px;
-}
-
-//RESET CSS//
-
-header {
+/* Navbar */
+.navbar {
+    position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20PX 50px;
-    background-color: $primary_color_orange;
-    //position: fixed;
-    
-}
+    padding: 15px 0;
+    background-color: $nav_background_color;
+    font-family: 'Ubuntu', sans-serif;
 
-#menu li{
-    list-style: none;
-    display: inline-block;
-    margin: 20px;
+    .max_width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     a {
-        color: $text_menu_color;
-        text-decoration: none;
-        font-size: 20px;
+        color: $menu_text_color;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+
+        a:hover {
+            color: $a_hover;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .logo {
+        a {
+            color: $menu_text_color;
+            font-size: 35px;
+            font-weight: 600;
+        }
     }
 }
 
-section {
-    width: 100%;
-    float: left;
+/* Botón menu */
+
+
+/* Section Acerca de mi */
+
+.acerca_de_mi {
+
+    .acerca_de_mi_div {
+        display: flex;
+        margin: auto;
+
+        .img_gal {
+            img {
+                width: 500px;
+                border-radius: 10%;
+            }
+        }
+    }
+
+    display: flex;
     height: 100vh;
-    position: relative;
-}
+    background-color: $img_background;
+    color: $text_color;
+    min-height: 500px;
+    font-family: 'Ubuntu',
+    sans-serif;
 
-#acerca_de {
-    background-color: $primary_color_white;
-    h1 {
-        position: absolute;
+    .max_width {
+        margin: auto 0 auto 40px;
+    }
+
+    .acerca_de_mi_content {
+        .acerca_de_mi_1 {
+            font-size: 27px;
+        }
+
+        .acerca_de_mi_2 {
+            font-size: 75px;
+            margin-left: -3px;
+        }
+
+        .acerca_de_mi_3 {
+            font-size: 40px;
+            margin: 5px 0;
+
+            span {
+                color: $nav_background_color;
+                font-weight: 500;
+            }
+        }
     }
 }
 
-#habilidades {
-    background-color: $primary_color_orange;
-    h1 {
-        position: absolute;
+/* Responsive media */
+@media(max-width: 840px) {
+    .max_width {
+        padding: 0 50px;
     }
-}
 
-#experiencias {
-    background-color: $primary_color_white;
-    h1 {
+    /* burguer menu */
+
+    .burguer_menu {
+        width: 25px;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $menu_text_color;
+            margin-top: 6px;
+            transform-origin: 0px 100%;
+            transition: all 300ms;
+            
+        }
     }
-}
 
-#logros {
-    background-color: $primary_color_orange;
-    h1 {
-        position: absolute;
+    .activeline1_bar_menu {
+        transform: rotate(45deg) translate(-1px, 0);
     }
-}
 
-#certificados {
-    background-color: $primary_color_white;
-    h1 {
-        position: absolute;
+    .activeline2_bar_menu {
+        opacity: 0;
+        margin-left: -25px;
     }
-}
 
-#contacto {
-    background-color: $primary_color_orange;
-    h1 {
-        position: absolute;
+    .activeline3_bar_menu {
+        transform: rotate(-45deg) translate(1px, 0);
+    }
+
+    .navbar {
+        .menu {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: $text_color;
+            text-align: center;
+            padding-top: 85px;
+
+            li {
+                display: block;
+
+                a {
+                    display: inline-block;
+                    margin: 25px 0;
+                    font-size: 25px;
+                }
+
+                a:hover {
+                    color: $a_hover;
+                }
+            }
+        }
     }
 }
