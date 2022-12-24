@@ -108,6 +108,9 @@
     padding: 0 50px;
   }
   /* burguer menu */
+  .menu {
+    visibility: hidden;
+  }
   .burguer_menu {
     width: 25px;
     position: absolute;
@@ -135,35 +138,8 @@
   .activeline3_bar_menu {
     transform: rotate(-45deg) translate(1px, 0);
   }
-  .navbar {
-    /*
-    .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: $text_color;
-        text-align: center;
-        padding-top: 85px;
-
-        li {
-            display: block;
-
-            a {
-                display: inline-block;
-                margin: 25px 0;
-                font-size: 25px;
-            }
-
-            a:hover {
-                color: $a_hover;
-            }
-        }
-    }
-    */
-  }
   .navbar .menu_burguer {
+    visibility: visible;
     position: fixed;
     height: 100vh;
     width: 100%;

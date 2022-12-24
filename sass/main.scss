@@ -145,6 +145,9 @@ $a_hover: #a34e00;
 
     /* burguer menu */
 
+    .menu {
+        visibility: hidden;
+    }
     .burguer_menu {
         width: 25px;
         position: absolute;
@@ -183,6 +186,7 @@ $a_hover: #a34e00;
 
 
         .menu_burguer {
+            visibility: visible;
             position: fixed;
             height: 100vh;
             width: 100%;
@@ -208,32 +212,5 @@ $a_hover: #a34e00;
             }
         }
 
-
-        /*
-        .menu {
-            position: fixed;
-            height: 100vh;
-            width: 100%;
-            left: 0;
-            top: 0;
-            background-color: $text_color;
-            text-align: center;
-            padding-top: 85px;
-
-            li {
-                display: block;
-
-                a {
-                    display: inline-block;
-                    margin: 25px 0;
-                    font-size: 25px;
-                }
-
-                a:hover {
-                    color: $a_hover;
-                }
-            }
-        }
-        */
     }
 }
