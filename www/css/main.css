@@ -220,115 +220,16 @@
   background-color: #101010;
   transform: translateX(-50%);
 }
-.habilidades .habilidades_content {
-  align-items: center;
-}
-.habilidades .habilidades_content img {
-  max-height: 55px;
-}
-.habilidades .habilidades_content .text {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 45px;
-}
 .habilidades .habilidades_grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 20px;
-}
-.habilidades .habilidades_grid .programming_languages_grid {
-  grid-area: 1/1/2/2;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 65px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  text-align: center;
-}
-.habilidades .habilidades_grid .programming_languages_grid .programming_language1 {
-  grid-area: 1/1/2/2;
-}
-.habilidades .habilidades_grid .programming_languages_grid .programming_language2 {
-  grid-area: 1/2/2/3;
-}
-.habilidades .habilidades_grid .programming_languages_grid .programming_language3 {
-  grid-area: 1/3/2/4;
-}
-.habilidades .habilidades_grid .databases_grid {
-  grid-area: 2/1/3/2;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 65px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  text-align: center;
-}
-.habilidades .habilidades_grid .databases_grid .database1 {
-  grid-area: 1/1/2/2;
-}
-.habilidades .habilidades_grid .databases_grid .database2 {
-  grid-area: 1/2/2/3;
-}
-.habilidades .habilidades_grid .databases_grid .database3 {
-  grid-area: 1/3/2/4;
-}
-.habilidades .habilidades_grid .web_developer_tools_grid {
-  grid-area: 3/1/4/2;
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 65px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   text-align: center;
 }
-.habilidades .habilidades_grid .web_developer_tools_grid .web_developer_tool1 {
-  grid-area: 1/1/2/2;
-}
-.habilidades .habilidades_grid .web_developer_tools_grid .web_developer_tool2 {
-  grid-area: 1/2/2/3;
-}
-.habilidades .habilidades_grid .web_developer_tools_grid .web_developer_tool3 {
-  grid-area: 1/3/2/4;
-}
-.habilidades .habilidades_grid .web_developer_tools_grid .web_developer_tool4 {
-  grid-area: 1/4/2/4;
-}
-.habilidades .habilidades_grid .tools_grid {
-  grid-area: 4/1/5/2;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 65px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  text-align: center;
-}
-.habilidades .habilidades_grid .tools_grid .tool1 {
-  grid-area: 1/1/2/2;
-}
-.habilidades .habilidades_grid .tools_grid .tool2 {
-  grid-area: 1/2/2/3;
-}
-.habilidades .habilidades_grid .tools_grid .tool3 {
-  grid-area: 1/3/2/4;
-}
-.habilidades .habilidades_grid .tools_grid .tool4 {
-  grid-area: 1/4/2/4;
-}
-.habilidades .habilidades_grid .otros_grid {
-  grid-area: 5/1 6/2;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-.habilidades .habilidades_grid .otros_grid .textos {
-  grid-area: 1/1/2/2;
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 45px;
+.habilidades .habilidades_grid img {
+  height: 100px;
 }
 
 /* Responsive media */
