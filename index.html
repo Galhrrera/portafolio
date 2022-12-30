@@ -60,61 +60,43 @@
     <section class="habilidades" id="habilidades">
         <div class="max_width">
             <h2 class="titulo">Habilidades</h2>
-            <div class="habilidades_content habilidades_grid "> <!--parent grid -->
-                <div class="skill"><img src="./www/img/c_sharp400.png" alt="C_Sharp"></div>
-                <div class="skill"><img src="./www/img/java400.png" alt="Java"></div>
-                <div class="skill"><img src="./www/img/python400.png" alt="Python"></div>
-                <div class="skill"><img src="./www/img/js400.png" alt="Jav Script"></div>
-                <div class="skill"><img src="./www/img/postgresql400.png" alt="PostgreSQL"></div>
-                <div class="skill"><img src="./www/img/mysql400.png" alt="MySQL"></div>
-                <div class="skill"><img src="./www/img/mongo400.png" alt="MongoDB"></div>
-                <div class="skill"><img src="./www/img/html400.png" alt="HTML"></div>
-                <div class="skill"><img src="./www/img/css400.png" alt="CSS"></div>
-                <div class="skill"><img src="./www/img/sass400.png" alt="SASS"></div>
-                <div class="skill"><img src="./www/img/wordpress400.png" alt="Wordpress"></div>
-                <div class="skill"><img src="./www/img/aws400.png" alt="AWS - Amazon Web Services"></div>
-                <div class="skill"><img src="./www/img/docker400.png" alt="Docker"></div>
-                <div class="skill"><img src="./www/img/fiware400.png" alt="Fiware"></div>
-                <div class="skill"><img src="./www/img/grafana400.png" alt="Grafana"></div>
-                <div class="skill"><img src="./www/img/git400.png" class = "git" alt="Github"></div>
-                <!--
-                <div class="programming_languages programming_languages_grid">                    
-                    <div class="programming_language1"><img src="./www/img/c_sharp400.png" alt="C_sharp"></div>
-                    <div class="programming_language2"><img src="./www/img/java400.png" alt="Java"></div>
-                    <div class="programming_language3"><img src="./www/img/python400.png" alt="Python"></div>
-                </div>
-                <div class="databases databases_grid">
-                    <div class="database1"><img src="./www/img/postgresql400.png" alt="PostgreSQL"></div>
-                    <div class="database2"><img src="./www/img/mysql400.png" alt="MySQL"></div>
-                    <div class="database3"><img src="./www/img/mongo400.png" alt="MongoDB"></div>
-                </div>
-                <div class="web_developer_tools web_developer_tools_grid">
-                    <div class="web_developer_tool1"><img src="./www/img/html400.png" alt="HTML"></div>
-                    <div class="web_developer_tool2"><img src="./www/img/css400.png" alt="CSS"></div>
-                    <div class="web_developer_tool3"><img src="./www/img/js400.png" alt="JavaScript"></div>
-                    <div class="web_developer_tool4"><img src="./www/img/sass400.png" alt="SASS"></div>
-                </div>
-                <div class="tools tools_grid">
-                    <div class="tool1"><img src="./www/img/wordpress400.png" alt="Wordpress"></div>
-                    <div class="tool2"><img src="./www/img/fiware400.png" alt="Fiware"></div>
-                    <div class="tool3"><img src="./www/img/grafana400.png" alt="Grafana"></div>
-                    <div class="tool4"><img src="./www/img/aws400.png" alt="AWS"></div>
-                </div>
-                <div class="otros otros_grid">
-                    <div class="textos">
-                        <div class="text">Otros</div>
-                        <p>Python <span><strong>EEL</strong></span></p>
-                        <a href="https://github.com/python-eel/Eel">Documentación EEL</a>
-                    </div>
-                </div>
-            -->
+            <div class="habilidades_content habilidades_grid "> 
+                <div class="skill"><img src="./www/img/c_sharp400.png" alt="C_Sharp" id="c_sharp_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/java400.png" alt="Java" id="java_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/python400.png" alt="Python" id="python_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/js400.png" alt="Java Script" id="javascript_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/postgresql400.png" alt="PostgreSQL" id="postgresql_img" onclick="showModal(this)"></div>
+                <!--<div class="skill"><img src="./www/img/mysql400.png" alt="MySQL" id="mysql_img" onclick="showModal(this)"></div>-->
+                <div class="skill"><img src="./www/img/mongo400.png" alt="MongoDB" id="mongo_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/html400.png" alt="HTML" id="html_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/css400.png" alt="CSS" id="css_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/sass400.png" alt="SASS" id="sass_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/wordpress400.png" alt="Wordpress" id="wordpress_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/aws400.png" alt="AWS - Amazon Web Services" id="aws_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/docker400.png" alt="Docker" id="docker_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/fiware400.png" alt="Fiware" id="fiware_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/grafana400.png" alt="Grafana" id="grafana_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/git400.png" alt="Github" id="git_img" onclick="showModal(this)"></div>
+                <div class="skill"><img src="./www/img/linux400.png" alt="Linux" id="linux_img" onclick="showModal(this)"></div>
+                
             </div>
+        </div>
+    </section>
+    <section class="modal" id="modal">
+        <div class="modal_container">
+            <h3 class="modal_title"></h3>
+            <img src="" alt="" class="modal_img" id="modal_img">
+            <p class="modal_text">
+                
+            </p>            
+            <p class="modal_close" id="close_modal" onclick="closeModal()">Cerrar</p>
         </div>
     </section>
 
 
 
     <script src="./www/js/main.js"></script>
+    <script src="./www/js/modals.js"></script>
 </body>
 
 </html>

@@ -182,13 +182,12 @@
 #habilidades {
   padding: 100px 0;
   height: 100vh;
-  width: 100vw;
-  background-color: #101010;
+  background-color: #fdf5e6;
 }
 
 .habilidades {
   font-family: "Poppins", sans-serif;
-  color: whitesmoke;
+  color: #101010;
 }
 .habilidades .titulo {
   position: relative;
@@ -206,7 +205,7 @@
   left: 50%;
   width: 235px;
   height: 3px;
-  background-color: whitesmoke;
+  background-color: #101010;
   transform: translateX(-50%);
 }
 .habilidades .titulo::after {
@@ -215,9 +214,9 @@
   bottom: -12px;
   left: 50%;
   font-size: 20px;
-  color: #ff904d;
+  color: #101010;
   padding: 5px;
-  background-color: #101010;
+  background-color: #fdf5e6;
   transform: translateX(-50%);
 }
 .habilidades .habilidades_grid {
@@ -228,8 +227,81 @@
   grid-row-gap: 10px;
   text-align: center;
 }
+.habilidades .habilidades_grid img:hover {
+  background-color: rgba(16, 16, 16, 0.2509803922);
+  border-radius: 10px;
+  transition: 0.5s;
+}
 .habilidades .habilidades_grid img {
   height: 100px;
+  cursor: pointer;
+}
+
+/* MODALS */
+.modal {
+  position: fixed;
+  font-family: "Poppins", sans-serif;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(16, 16, 16, 0.8);
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s 0.8s;
+}
+.modal .modal_container {
+  width: 90%;
+  max-width: 900px;
+  max-height: 90%;
+  background-color: whitesmoke;
+  margin: auto;
+  border-radius: 15px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: translateY(-100vh);
+  transition: transform 0.8s;
+}
+.modal .modal_container .modal_title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+}
+.modal .modal_container .modal_text {
+  margin-bottom: 15px;
+}
+.modal .modal_container .modal_img {
+  width: 90%;
+  max-width: 150px;
+}
+.modal .modal_container .modal_close {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #a34e00;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 400;
+  transition: background-color 0.3s;
+}
+.modal .modal_container .modal_close:hover {
+  color: #a34e00;
+  background-color: whitesmoke;
+}
+
+.modal_show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.5s;
+}
+.modal_show .modal_container {
+  transform: translateY(0);
+  transition: transform 0.7s 0.7s;
 }
 
 /* Responsive media */

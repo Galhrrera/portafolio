@@ -7,7 +7,10 @@ $nav_background_color: #ff904d;
 $img_background: whitesmoke;
 $text_color: #1c1c1c;
 $a_hover: #a34e00;
+$img_hover: #10101040;
 $black_background: #101010;
+$orange_background: #fdf5e6;
+$modal_background: #101010cc;
 
 
 
@@ -228,14 +231,14 @@ $black_background: #101010;
 #habilidades {
     padding: 100px 0;
     height: 100vh;
-    width: 100vw;
-    background-color: #FAD5A5;
+    
+    background-color: $orange_background;
 }
 
 .habilidades {
 
     font-family: "Poppins", sans-serif;
-    color: $menu_text_color;
+    color: $black_background;
 
     .titulo {
         position: relative;
@@ -254,7 +257,7 @@ $black_background: #101010;
         left: 50%;
         width: 235px;
         height: 3px;
-        background-color: $img_background;
+        background-color: $black_background;
         transform: translateX(-50%);
     }
 
@@ -264,9 +267,9 @@ $black_background: #101010;
         bottom: -12px;
         left: 50%;
         font-size: 20px;
-        color: $nav_background_color;
+        color: $black_background;
         padding: 5px;
-        background-color: $black_background;
+        background-color: $orange_background;
         transform: translateX(-50%);
     }
 
@@ -278,13 +281,100 @@ $black_background: #101010;
         grid-row-gap: 10px;
         text-align: center;
 
+        img:hover {
+            background-color: $img_hover;
+            border-radius: 10px;
+            transition: 0.5s;
+
+        }
+
         img {
             height: 100px;
-
+            cursor: pointer;
         }
     }
 }
 
+/* MODALS */
+
+
+.modal {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $modal_background;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s .8s;
+    
+
+
+    .modal_container {
+        width: 90%;
+        max-width: 900px;
+        max-height: 90%;
+        background-color: $img_background;
+        margin: auto;
+        border-radius: 15px;
+        padding: 3em 2.5em;
+        display: grid;
+        gap: 1em;
+        place-items: center;
+        grid-auto-columns: 100%;
+        transform: translateY(-100vh);
+        transition: transform .8s;
+
+        .modal_title {
+            font-family:'Ubuntu', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        .modal_text {
+            margin-bottom: 15px;
+        }
+
+        .modal_img {
+            width: 90%;
+            max-width: 150px;
+        }
+
+        .modal_close {
+            text-decoration: none;
+            color: $menu_text_color;
+            background-color: $a_hover;
+            padding: 1em 3em;
+            border: 1px solid;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 400;
+            transition: background-color .3s ;
+        }
+
+        .modal_close:hover {
+            color: $a_hover;
+            background-color: $menu_text_color;
+        }
+
+
+    }
+}
+
+.modal_show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .5s;
+
+    .modal_container {
+        transform: translateY(0);
+        transition: transform .7s .7s;
+    }
+    
+}
 
 
 /* Responsive media */
