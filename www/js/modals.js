@@ -167,7 +167,6 @@ function showModal(element) {
             `
             modal.classList.add("modal_show");
             break;
-        
     }
 }
 
