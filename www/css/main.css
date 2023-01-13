@@ -225,16 +225,17 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  text-align: center;
 }
 .habilidades .habilidades_grid img:hover {
-  background-color: rgba(16, 16, 16, 0.2509803922);
-  border-radius: 10px;
   transition: 0.5s;
+  transform: scale(1.25);
+  z-index: 1;
+  position: relative;
 }
 .habilidades .habilidades_grid img {
   height: 100px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 /* MODALS */

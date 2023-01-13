@@ -231,7 +231,7 @@ $modal_background: #101010cc;
 #habilidades {
     padding: 100px 0;
     height: 100vh;
-    
+
     background-color: $orange_background;
 }
 
@@ -279,19 +279,20 @@ $modal_background: #101010cc;
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
-        text-align: center;
 
         img:hover {
-            background-color: $img_hover;
-            border-radius: 10px;
             transition: 0.5s;
-
+            transform: scale(1.25);
+            z-index: 1;
+            position: relative;
         }
 
         img {
             height: 100px;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
         }
+        
     }
 }
 
@@ -311,7 +312,7 @@ $modal_background: #101010cc;
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s .8s;
-    
+
 
 
     .modal_container {
@@ -330,7 +331,7 @@ $modal_background: #101010cc;
         transition: transform .8s;
 
         .modal_title {
-            font-family:'Ubuntu', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
             font-size: 2.5rem;
         }
 
@@ -352,7 +353,7 @@ $modal_background: #101010cc;
             border-radius: 6px;
             display: inline-block;
             font-weight: 400;
-            transition: background-color .3s ;
+            transition: background-color .3s;
         }
 
         .modal_close:hover {
@@ -373,7 +374,7 @@ $modal_background: #101010cc;
         transform: translateY(0);
         transition: transform .7s .7s;
     }
-    
+
 }
 
 
