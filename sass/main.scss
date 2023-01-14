@@ -383,47 +383,73 @@ $modal_background: #101010cc;
 #certificados_y_logros {
     padding: 100px 0;
     height: 100vh;
-    background-color: $img_background;
-    font-family: "Poppins", sans-serif
+    background-color: $black_background;
+    font-family: "Poppins", sans-serif;
+    //color: $menu_text_color;
+    //color: $black_background;
 }
 
 .certificados_y_logros {
-    div {
-        text-align: center;
-        width: 100%;
 
-        h2 {
+    .container {
+        //background-color: $img_background;
+        width: 90%;
+        //border-radius: 25px;
+        //min-height: 100vh;
+        //max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
 
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 2.5rem;
-
+        a {
+            background-color: $img_background;
+            font-size: 30px;
+            max-width: 45px;
+            max-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            //color: $img_background;
         }
-        /*
-        p {
 
+        a:hover {
+            cursor: pointer;
         }
-        */
     }
 
-    .dot-container {
-        text-align: center;
-        margin-top: 20px;
-    }
+    .certificados_y_logros_container {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        align-items: center;
+        gap: 1em;
+        //text-align: center;
+        justify-content: center;
 
-    .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
+        .slider_body {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            opacity: 0;
+            pointer-events: none;
+            background-color: $img_background;
+            padding: 25px;
+            border-radius: 25px;
+            transition: opacity 1.5s;
+        }
 
-    .dot.active {
-        background-color: #717171;
+        .slider_body_show {
+            opacity: 1;
+            pointer-events: unset;
+        }
     }
 }
+
+.slider {
+    padding: 40px 0;
+}
+
+
+
+
+
+
 
 
 /* Responsive media */

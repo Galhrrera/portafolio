@@ -107,8 +107,50 @@
             <p class="modal_close" id="close_modal" onclick="closeModal()">Cerrar</p>
         </div>
     </section>
-    <section id="certificados_y_logros" class="certificados_y_logros">
-        <div>
+
+    <section id="certificados_y_logros" class="certificados_y_logros slider">
+
+        <div class="certificados_y_logros_container container">
+            <a id="prev" class="prev slider_arrow" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="slider_body slider_body_show" data-id="1">
+                <div class="slider_text">
+                    <h2>XXXV Maratón nacional de programación ACIS / REDIS 2021</h2>
+                    <p>Participación en la XXXV maratón nacional de programación ACIS / REDIS 2021, realizada en la
+                        universidad
+                        <em>EAFIT</em> de medellín el día 5 de marzo del 2022 en representación de la facultad TIC de la
+                        <em>UPB</em>,
+                        en compañía del equipo conformado en el semillero de maratones de programación de la
+                        facultad.<br>
+                        La maratón contó con la participación de 70 equipos nacionales</em>
+                    </p>
+                </div>
+            </div>
+            <div class="slider_body" data-id="2">
+                <div class="slider_text">
+                    <h2>Seguridad de la información | 2021</h2>
+                    <p>Curso desarrollado por <em>TCS</em> para sus empleados, en el cual, se realiza un aprendizaje sobre la
+                        importancia
+                        de la información y la seguridad de la misma en ámbitos personales y empresariales.
+                    </p>
+                </div>
+            </div>
+            <div class="slider_body" data-id="3">
+                <div class="slider_text">
+                    <h2>Misión TIC 2022 | 2021</h2>
+                    <p>Curso intensivo de programación y desarrollo web patrocinado y organizado por el gobierno nacional
+                        durante el año 2021.<br>
+                        Durante el curso se completaron los módulos de <em><strong>fundamentos de programación</strong></em> y
+                        <em><strong>desarrollo de software</strong></em>.
+                    </p>
+                </div>
+            </div>
+            <a id="next" class="next slider_arrow" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+    </section>
+    <!--
+    <section id="certificados_y_logros" class="certificados_y_logros slider">
+        <div class="slider_container container">
             <h2>XXXV Maratón nacional de programación ACIS / REDIS 2031</h2>
             <p>Participación en la XXXV maratón nacional de programación ACIS / REDIS 2021, realizada en la universidad
                 <em>EAFIT</em> de medellín el día 5 de marzo del 2022 en representación de la facultad TIC de la
@@ -117,13 +159,13 @@
                 La maratón contó con la participación de 70 equipos nacionales</em>
             </p>
         </div>
-        <div>
+        <div class="slider_container container">
             <h2>Seguridad de la información | 2021</h2>
             <p>Curso desarrollado por <em>TCS</em> para sus empleados, en el cual, se realiza un aprendizaje sobre la
                 importancia
                 de la información y la seguridad de la misma en ámbitos personales y empresariales.</p>
         </div>
-        <div>
+        <div class="slider_container container">
             <h2>Misión TIC 2022 | 2021</h2>
             <p>Curso intensivo de programación y desarrollo web patrocinado y organizado por el gobierno nacional
                 durante el año 2021.<br>
@@ -139,12 +181,13 @@
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
+    -->
 
 
 
     <script src="./www/js/main.js"></script>
     <script src="./www/js/modals.js"></script>
-    <script src="./www/js/slide.js"></script>
+    <script src="./www/js/slider.js"></script>
 </body>
 
 </html>

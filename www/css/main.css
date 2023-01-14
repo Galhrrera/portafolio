@@ -313,38 +313,50 @@
 #certificados_y_logros {
   padding: 100px 0;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: #101010;
   font-family: "Poppins", sans-serif;
 }
 
-.certificados_y_logros div {
-  text-align: center;
-  width: 100%;
-  /*
-  p {
-
-  }
-  */
+.certificados_y_logros .container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.certificados_y_logros div h2 {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.5rem;
-}
-.certificados_y_logros .dot-container {
-  text-align: center;
-  margin-top: 20px;
-}
-.certificados_y_logros .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+.certificados_y_logros .container a {
+  background-color: whitesmoke;
+  font-size: 30px;
+  max-width: 45px;
+  max-height: 50px;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  text-align: center;
 }
-.certificados_y_logros .dot.active {
-  background-color: #717171;
+.certificados_y_logros .container a:hover {
+  cursor: pointer;
+}
+.certificados_y_logros .certificados_y_logros_container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+}
+.certificados_y_logros .certificados_y_logros_container .slider_body {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  opacity: 0;
+  pointer-events: none;
+  background-color: whitesmoke;
+  padding: 25px;
+  border-radius: 25px;
+  transition: opacity 1.5s;
+}
+.certificados_y_logros .certificados_y_logros_container .slider_body_show {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.slider {
+  padding: 40px 0;
 }
 
 /* Responsive media */
