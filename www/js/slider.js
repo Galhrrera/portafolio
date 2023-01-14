@@ -1,36 +1,24 @@
-/*
-var slideIndex = 0;
-showSlides();
+const sliders = [...document.querySelectorAll(".slider_body")];
+const arrowNext = document.querySelector("#next");
+const arrowPrev = document.querySelector("#prev");
+let value;
 
-function plusSlides(n) {
-  slideIndex += n;
-  showSlides();
+console.log(sliders)
+
+
+function changePosition(n) { //El parámetro es el número que sumará o restará para mostrar el 
+  //siguiente o anterior
+  const currentElement = Number(document.querySelector(".slider_body_show").dataset.id);
+  document.querySelector(".slider_body_show").classList.toggle("slider_body_show");
+  value = currentElement;
+  value += n;
+
+  if (value === 0 || value == sliders.length + 1) { //Con este condicional, se pueden agregar tantos div
+    //en certificados y logros "sliders" como guste, y la variable "continue
+    value = value === 0 ? sliders.length : 1;
+  }
+
+  sliders[value - 1].classList.toggle("slider_body_show");
+
 }
 
-function currentSlide(n) {
-  slideIndex = n;
-  showSlides();
-}
-
-function showSlides() {
-    alert("Entra en el método");
-  var i;
-  var slides = document.getElementsByTagName("section")[0].getElementsByTagName("div");
-  var dots = document.getElementsByTagName("section")[0].getElementsByClassName("dot");
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  if (slideIndex < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-*/

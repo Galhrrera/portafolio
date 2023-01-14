@@ -390,29 +390,13 @@ $modal_background: #101010cc;
 }
 
 .certificados_y_logros {
-
+    display: grid;
+    place-items: center;
+    
     .container {
-        //background-color: $img_background;
-        width: 90%;
-        //border-radius: 25px;
-        //min-height: 100vh;
-        //max-width: 1200px;
+        width: 70%;
         margin: 0 auto;
         overflow: hidden;
-
-        a {
-            background-color: $img_background;
-            font-size: 30px;
-            max-width: 45px;
-            max-height: 50px;
-            border-radius: 50%;
-            text-align: center;
-            //color: $img_background;
-        }
-
-        a:hover {
-            cursor: pointer;
-        }
     }
 
     .certificados_y_logros_container {
@@ -420,8 +404,8 @@ $modal_background: #101010cc;
         grid-template-columns: 50px 1fr 50px;
         align-items: center;
         gap: 1em;
-        //text-align: center;
         justify-content: center;
+        padding: 10px;
 
         .slider_body {
             grid-column: 2/3;
@@ -431,12 +415,43 @@ $modal_background: #101010cc;
             background-color: $img_background;
             padding: 25px;
             border-radius: 25px;
-            transition: opacity 1.5s;
+            transition: opacity 1s;
+
+            .slider_text {
+                h2 {
+                    font-size: 2rem;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 1.7;
+                }
+            }
         }
 
         .slider_body_show {
             opacity: 1;
             pointer-events: unset;
+        }
+
+        .slider_arrow {
+            cursor: pointer;
+
+            width: 40px;
+            height: 40px;
+            background-color: $menu_text_color;
+            color: $black_background;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            border-radius: 50%;
+        }
+
+        .slider_arrow:hover {
+            transform: scale(1.25);
         }
     }
 }
