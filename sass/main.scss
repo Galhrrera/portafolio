@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-@import "skills_grids";
+
 
 $menu_text_color: whitesmoke;
 $nav_background_color: #ff904d;
@@ -461,6 +461,61 @@ $modal_background: #101010cc;
 }
 
 
+/* CONTACTO */
+#contacto {
+    padding: 100px 0;
+    height: 100vh;
+    background-color: $img_background;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.contacto {
+    display: grid;
+    place-items: center;
+
+    .contacto_container {
+        background-color: $black_background;
+        width: 70%;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        gap: 1em;
+        justify-content: center;
+        padding: 30px;
+        border-radius: 30px;
+
+        p {
+            margin-bottom: 40px;
+            color: $menu_text_color;
+        }
+
+        .btn {
+            text-align: center;
+           
+            a {
+                display: inline-block;
+                background-color: $nav_background_color;
+                color: $menu_text_color;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 10px 30px;
+                margin-top: 20px;
+                border-radius: 6px;
+                border: 2px solid $nav_background_color;
+                transition: all 0.3s ease;
+            }
+    
+            a:hover {
+                color: $a_hover;
+                background: none;
+            }
+        }
+    }
+}
+
+/* FOOTER */
 
 
 
