@@ -426,6 +426,13 @@
 }
 
 /* FOOTER */
+#footer {
+  padding: 100px 0;
+  height: 8vh;
+  background-color: #ff904d;
+  font-family: "Poppins", sans-serif;
+}
+
 /* Responsive media */
 @media (max-width: 1190px) {
   .Inicio .Inicio_content .Inicio2 {

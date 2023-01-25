@@ -516,7 +516,12 @@ $modal_background: #101010cc;
 }
 
 /* FOOTER */
-
+#footer {
+    padding: 100px 0;
+    height: 8vh;
+    background-color: $nav_background_color;
+    font-family: "Poppins", sans-serif;
+}
 
 
 
