@@ -11,3 +11,15 @@ function activeBurguerMenu() {
     line3.classList.toggle("activeline3_bar_menu");
     menu.classList.toggle("menu_burguer");
 }
+
+
+/* 
+const texto = document.getElementById("texto");
+
+window.onscroll = function() { 
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) { 
+        texto.classList.add("clase");
+    } 
+}
+
+*/
