@@ -48,6 +48,30 @@
   font-weight: 600;
 }
 
+.btn_scroll_up {
+  z-index: 3000;
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  color: white;
+  background-color: #a34e00;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.btn_scroll_up .show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Section Inicio */
 .Inicio {
   display: flex;
@@ -104,30 +128,6 @@
   margin-top: 6px;
   transform-origin: 0px 100%;
   transition: all 300ms;
-}
-
-.btn_scroll_up {
-  position: fixed;
-  height: 45px;
-  width: 42px;
-  color: white;
-  background-color: #a34e00;
-  right: 30px;
-  bottom: 30px;
-  text-align: center;
-  line-height: 45px;
-  z-index: 9999;
-  font-size: 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.btn_scroll_up .show {
-  bottom: 30px;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 /* Section Acerca de mi */

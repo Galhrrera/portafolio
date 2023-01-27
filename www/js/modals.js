@@ -158,6 +158,7 @@ function showModal(element) {
             modal.classList.add("modal_show");
             break;
         case "git_img":
+            //alert("Entra al caso")
             modal_img = document.getElementById("modal_img").src = "./www/img/git400.png";
             modal_title.innerHTML = `GIT - GITHUB`;
             modal_text.innerHTML = `
