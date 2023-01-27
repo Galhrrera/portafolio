@@ -18,9 +18,7 @@ const btn_scroll = document.querySelector(".btn_scroll_up");
 
 window.onscroll = function() { 
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) { 
-        //btn_scroll.classList.toggle("show");
         btn_scroll.classList.add("show")
-        //texto.classList.toggle("show")
     } 
     else if (document.body.scrollTop < 500 || document.documentElement.scrollTop < 500) {
         btn_scroll.classList.remove("show")
