@@ -55,9 +55,36 @@ $modal_background: #101010cc;
         list-style: none;
         display: inline-block;
 
-        a:hover {
-            color: $a_hover;
-            transition: all 0.3s ease;
+        a {
+            &:hover {
+                text-decoration: none;
+                color: $a_hover;
+                font-size: 18px;
+                //font-weight: 400;
+                transition: all 0.5s ease-in-out;
+                position: relative;
+                text-transform: uppercase;
+            }
+
+            &::before {
+                content: attr(data-item);
+                transition: 0.5s;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 0;
+                overflow: hidden;
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                    transition: all 0.5s ease-in-out;
+                    color: $a_hover;
+                }
+            }
         }
     }
 
@@ -72,7 +99,7 @@ $modal_background: #101010cc;
 
 .btn_scroll_up {
     z-index: 3000;
-    position: fixed;    
+    position: fixed;
     height: 45px;
     width: 42px;
     color: white;
@@ -80,7 +107,7 @@ $modal_background: #101010cc;
     right: 30px;
     bottom: 30px;
     text-align: center;
-    line-height: 45px;    
+    line-height: 45px;
     font-size: 30px;
     border-radius: 10px;
     cursor: pointer;
@@ -420,7 +447,48 @@ $modal_background: #101010cc;
 .certificados_y_logros {
     display: grid;
     place-items: center;
-    
+
+    .max_width {
+        max-width: 1800px;
+        padding: 0 80px;
+        margin: auto;
+    }
+
+    .titulo {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        padding-bottom: 15px;
+        font-family: "Ubuntu", sans-serif;
+        color: $menu_text_color;
+    }
+
+    .titulo:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 235px;
+        height: 3px;
+        background-color: $menu_text_color;
+        transform: translateX(-50%);
+        //transform: translateY(10px);
+    }
+
+    .titulo::after {
+        content: "y logros";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        font-size: 20px;
+        color: $menu_text_color;
+        padding: 5px;
+        background-color: $black_background;
+        transform: translateX(-50%);
+    }
+
     .container {
         width: 70%;
         margin: 0 auto;
@@ -434,6 +502,7 @@ $modal_background: #101010cc;
         gap: 1em;
         justify-content: center;
         padding: 10px;
+        bottom: 30px;
 
         .slider_body {
             grid-column: 2/3;
@@ -502,6 +571,40 @@ $modal_background: #101010cc;
     display: grid;
     place-items: center;
 
+    .titulo {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        padding-bottom: 15px;
+        font-family: "Ubuntu", sans-serif;
+        color: $black_background;
+    }
+
+    .titulo:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 235px;
+        height: 3px;
+        background-color: $black_background;
+        transform: translateX(-50%);
+    }
+
+    .titulo::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        font-size: 20px;
+        color: $black_background;
+        padding: 5px;
+        background-color: $img_background;
+        transform: translateX(-50%);
+    }
+
     .contacto_container {
         background-color: $black_background;
         width: 70%;
@@ -521,7 +624,7 @@ $modal_background: #101010cc;
 
         .btn {
             text-align: center;
-           
+
             a {
                 display: inline-block;
                 background-color: $nav_background_color;
@@ -534,7 +637,7 @@ $modal_background: #101010cc;
                 border: 2px solid $nav_background_color;
                 transition: all 0.3s ease;
             }
-    
+
             a:hover {
                 color: $a_hover;
                 background: none;
