@@ -540,37 +540,132 @@
 
 /* FOOTER */
 #footer {
-  padding: 100px 0;
-  height: 8vh;
+  height: 75px;
   background-color: #ff904d;
   font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#footer .footer_left {
+  margin: auto;
+}
+#footer .footer_left p {
+  font-size: 25px;
+  color: whitesmoke;
+}
+#footer .footer_left p span img {
+  padding-top: 20px;
+  max-height: 40px;
+}
+#footer .footer_right {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+}
+#footer .footer_right a {
+  text-align: center;
+}
+#footer .footer_right a img:hover {
+  transition: 0.5s;
+  transform: scale(1.25);
+  z-index: 1;
+  position: relative;
+}
+#footer .footer_right a img {
+  max-height: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Responsive media */
-@media (max-width: 1190px) {
-  .Inicio .Inicio_content .Inicio2 {
-    font-size: 60px;
+@media only screen and (max-width: 576px) {
+  /*
+  .navbar {
+      .max_width {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      a,
+      .logo a {
+          font-size: 16px;
+      }
+
+      li {
+          margin-top: 10px;
+
+          a {
+              &:hover {
+                  font-size: 16px;
+              }
+          }
+      }
   }
-  .Inicio .Inicio_content .Inicio3 {
-    font-size: 40px;
+
+  .Inicio .Inicio_div {
+      flex-direction: column;
+      align-items: center;
+
+      .img_gal {
+          img {
+              width: 300px;
+          }
+      }
   }
-  .Inicio .Inicio_content .Inicio3 span {
-    color: #ff904d;
-    font-weight: 400;
+
+  .Inicio_content {
+
+      .Inicio1,
+      .Inicio2,
+      .Inicio3 {
+          font-size: 20px;
+      }
   }
-  .Inicio .Inicio_div .img_gal img {
-    width: 400px;
-    border-radius: 10%;
-  }
-  .Inicio .max_width {
-    margin-left: 0px;
-  }
+  */
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 992px) {
+  /*
+  .navbar {
+      height: 60px;
+      padding: 10px 0;
+
+      .max_width {
+          padding: 0 50px;
+      }
+
+      a,
+      .logo a {
+          font-size: 18px;
+      }
+  }
+
+  .Inicio {
+      min-height: 400px;
+  }
+
+  .Inicio .Inicio_div {
+      .img_gal {
+          img {
+              width: 400px;
+          }
+      }
+  }
+
+  .Inicio_content {
+
+      .Inicio1,
+      .Inicio2,
+      .Inicio3 {
+          font-size: 25px;
+      }
+  }
+  */
+}
+@media only screen and (max-width: 1200px) {
   .max_width {
     padding: 0 50px;
   }
-  /* burguer menu */
   .menu {
     visibility: hidden;
   }
@@ -628,73 +723,250 @@
   .navbar .menu_burguer li a:hover {
     color: #a34e00;
   }
-  .Inicio .Inicio_div .img_gal img {
-    width: 250px;
-    border-radius: 10%;
-  }
-}
-@media (max-width: 380px) {
-  .Inicio .Inicio_content .Inicio1 {
-    font-size: 10px;
-  }
   .Inicio .Inicio_content .Inicio2 {
-    font-size: 30px;
+    font-size: 65px;
   }
   .Inicio .Inicio_content .Inicio3 {
-    font-size: 15px;
+    font-size: 30px;
+    padding: 10px;
   }
   .Inicio .Inicio_content .Inicio3 span {
     color: #ff904d;
-    font-weight: 200;
+    font-weight: 400;
   }
   .Inicio .Inicio_div .img_gal img {
-    width: 120px;
+    width: 280px;
     border-radius: 10%;
   }
-  .Inicio .max_width {
-    margin-left: 0px;
-  }
-  .acerca_de_mi .titulo {
-    position: relative;
-    text-align: center;
+  .certificados_y_logros .titulo {
     font-size: 30px;
-    font-weight: 300;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    font-family: "Ubuntu", sans-serif;
   }
-  .acerca_de_mi .acerca_de_mi_content {
-    align-items: center;
-    justify-content: space-between;
+  .certificados_y_logros .slider_body {
+    max-height: 450px;
   }
-  .acerca_de_mi .acerca_de_mi_content .text {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 30px;
+  .certificados_y_logros .slider_body .slider_text {
+    max-height: 390px;
+    overflow-y: auto;
   }
-  .acerca_de_mi .acerca_de_mi_content .text span {
-    color: #ff904d;
+  .certificados_y_logros .slider_body .slider_text h2 {
+    font-size: 25px !important;
   }
-  .acerca_de_mi .acerca_de_mi_content p {
-    text-align: justify;
-    font-size: 15px;
-  }
-  .acerca_de_mi .acerca_de_mi_content a {
-    display: inline-block;
-    background-color: #ff904d;
-    color: whitesmoke;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 5px 15px;
-    margin-top: 15px;
-    border-radius: 6px;
-    border: 2px solid #ff904d;
-    transition: all 0.3s ease;
-  }
-  .acerca_de_mi .acerca_de_mi_content a:hover {
-    color: #a34e00;
-    background: none;
+  .certificados_y_logros .slider_body .slider_text p {
+    font-size: 20px !important;
   }
 }
+/* Responsive media 
+@media(max-width: 1190px) {
+    .Inicio {
+        .Inicio_content {
+            .Inicio2 {
+                font-size: 60px;
+            }
+
+            .Inicio3 {
+                font-size: 40px;
+
+                span {
+                    color: $nav_background_color;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 400px;
+                    border-radius: 10%;
+                }
+            }
+        }
+
+        .max_width {
+            margin-left: 0px;
+        }
+    }
+
+}
+
+
+@media(max-width: 900px) {
+    .max_width {
+        padding: 0 50px;
+    }
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .burguer_menu {
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        display: block;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $menu_text_color;
+            margin-top: 6px;
+            transform-origin: 0px 100%;
+            transition: all 300ms;
+
+        }
+    }
+
+    .activeline1_bar_menu {
+        z-index: 2000;
+        transform: rotate(45deg) translate(-1px, 0);
+    }
+
+    .activeline2_bar_menu {
+        z-index: 2000;
+        opacity: 0;
+        margin-left: -25px;
+    }
+
+    .activeline3_bar_menu {
+        z-index: 2000;
+        transform: rotate(-45deg) translate(1px, 0);
+    }
+
+    .navbar {
+
+        .menu_burguer {
+            visibility: visible;
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: $text_color;
+            text-align: center;
+            padding-top: 85px;
+            transform-origin: 0px 100%;
+            transition: all 300ms;
+            //display: block;
+
+            li {
+                display: block;
+
+                a {
+                    display: inline-block;
+                    margin: 25px 0;
+                    font-size: 25px;
+                }
+
+                a:hover {
+                    color: $a_hover;
+                }
+            }
+        }
+
+    }
+
+    .Inicio {
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 250px;
+                    border-radius: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .Inicio {
+        .Inicio_content {
+            .Inicio1 {
+                font-size: 10px;
+            }
+
+            .Inicio2 {
+                font-size: 30px;
+            }
+
+            .Inicio3 {
+                font-size: 15px;
+
+                span {
+                    color: $nav_background_color;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .Inicio_div {
+            .img_gal {
+                img {
+                    width: 120px;
+                    border-radius: 10%;
+                }
+            }
+        }
+
+        .max_width {
+            margin-left: 0px;
+        }
+    }
+
+    .acerca_de_mi {
+
+        .titulo {
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .acerca_de_mi_content {
+            align-items: center;
+            justify-content: space-between;
+
+            .text {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 30px;
+
+                span {
+                    color: $nav_background_color;
+                }
+            }
+
+            p {
+                text-align: justify;
+                font-size: 15px;
+            }
+
+            a {
+                display: inline-block;
+                background-color: $nav_background_color;
+                color: $menu_text_color;
+                font-size: 15px;
+                font-weight: 500;
+                padding: 5px 15px;
+                margin-top: 15px;
+                border-radius: 6px;
+                border: 2px solid $nav_background_color;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: $a_hover;
+                background: none;
+            }
+        }
+    }
+
+}
+*/
 
 /*# sourceMappingURL=main.css.map */

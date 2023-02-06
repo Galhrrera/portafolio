@@ -1,0 +1,167 @@
+// SCSS Media Queries
+
+@media only screen and (max-width: 576px) {
+    .navbar {
+        .max_width {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a,
+        .logo a {
+            font-size: 16px;
+        }
+
+        li {
+            margin-top: 10px;
+
+            a {
+                &:hover {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .Inicio .Inicio_div {
+        flex-direction: column;
+        align-items: center;
+
+        .img_gal {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    .Inicio_content {
+
+        .Inicio1,
+        .Inicio2,
+        .Inicio3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        height: 60px;
+        padding: 10px 0;
+
+        .max_width {
+            padding: 0 50px;
+        }
+
+        a,
+        .logo a {
+            font-size: 18px;
+        }
+    }
+
+    .Inicio {
+        min-height: 400px;
+    }
+
+    .Inicio .Inicio_div {
+        .img_gal {
+            img {
+                width: 400px;
+            }
+        }
+    }
+
+    .Inicio_content {
+
+        .Inicio1,
+        .Inicio2,
+        .Inicio3 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .Inicio {
+        height: auto;
+
+        .Inicio_div {
+            flex-direction: column;
+            align-items: center;
+
+            .img_gal {
+                img {
+                    width: 70%;
+                }
+            }
+        }
+
+        .Inicio_content {
+            text-align: center;
+
+            .Inicio1 {
+                font-size: 20px;
+            }
+
+            .Inicio2 {
+                font-size: 50px;
+            }
+
+            .Inicio3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        height: 50px;
+
+        .max_width {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .logo a {
+            font-size: 25px;
+        }
+
+    }
+
+    .btn_scroll_up {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Inicio_content {
+        .Inicio2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Inicio_content {
+        .Inicio1 {
+            font-size: 18px;
+        }
+
+        .Inicio2 {
+            font-size: 30px;
+        }
+
+        .Inicio3 {
+            font-size: 20px;
+        }
+    }
+}
